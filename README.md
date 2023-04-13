@@ -9,7 +9,7 @@ the output files would be in the `build` directory
 The figures should be placed under `figures` directory
 
 ## comments
-Comments in the tex files are handled by [todonotes]{https://tug.ctan.org/macros/latex/contrib/todonotes/todonotes.pdf}. To add a comment, please use
+Comments in the tex files are handled by [todonotes](https://tug.ctan.org/macros/latex/contrib/todonotes/todonotes.pdf). To add a comment, please use
 ```
 \todo[author={name}]{comment}
 ```
