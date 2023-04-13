@@ -1,12 +1,12 @@
 # J/psi paper
-To compile, simple type 
+To compile, simply use 
 ```
 latexmk 
 ```
-the output files would be in the `build` directory
+the output files would be written to the `build` directory
 
 ## file struture
-The figures should be placed under `figures` directory
+Figures should be placed under `figures` directory
 
 ## comments
 Comments in the tex files are handled by [todonotes](https://tug.ctan.org/macros/latex/contrib/todonotes/todonotes.pdf). To add a comment, please use
