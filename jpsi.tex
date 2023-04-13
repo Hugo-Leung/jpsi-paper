@@ -8,11 +8,13 @@
 \usepackage[separate-uncertainty=true]{siunitx}
 \usepackage{physics}
 \usepackage{cleveref}
+\usepackage[obeyFinal]{todonotes}
+\setuptodonotes{inline}
 \graphicspath{{figures/}}
 
 \begin{document}
 \title{Measurement of $(p+d) / (p+p)$ cross section ratios for
-$J/\Psi$ and $\Psi^\prime$ production at 120 GeV}
+$J/\Psi$ and $\Psi^\prime$ production at \SI{120}{\GeV}}
 \input{author}
 
 \date{\today}
@@ -31,13 +33,28 @@ distributions in the proton and neutron. We compare the measured
 charmonium production cross section ratios with that of the
 Drell-Yan process. We also compare the measured cross section ratios with
 theoretical calculations.
+
+\todo{include psip as well}
 \end{abstract}
 
 \pacs{14.20.Dh,14.65.Bt,13.60.Hb}
 
 \maketitle
 \section{Introduction}
-\nocite{*}
+\todo{explain the interest of studying the charmomnium and NRQCD}
+\todo{explain the scope of the paper}
 
+\section{The SeaQuest Experiment}
+\todo{brief discussion of the spectrometer}
+
+\section{Data Analysis}
+\todo{explain mass fit, refer to long paper}
+
+\section{$J/\psi$ and $\psi'$ Cross section}
+\todo{describe the cross section calculation}
+\todo{show the cross section plots}
+\todo{The measured $\expval{P_T^2}$ vs $\sqrt{s}$ from different experiments}
+
+\nocite{*}
 \bibliography{reference}
 \end{document}
