@@ -197,6 +197,18 @@ are obtained:
 \section{\texorpdfstring{$J/\psi$}{J/psi} and \texorpdfstring{$\psi'$}{psi'} Cross Section}
 \label{sec:cross_section}
 \todo{describe the cross section calculation}
+In order to obtain the $J/\Psi$ and $\psi'$ $d\sigma/dx_F$ differential cross sections,
+the data were split into five bins of $x_F$ and the dimuon mass distributions
+were fitted for each $x_F$ bin to extract the $J/\Psi$ and $\psi'$ yield.
+The quarkonium production cross section is obtained from the yields ($Y$) as follows
+\begin{equation}
+d\sigma = \frac{Y}{Acc \cdot Eff \cdot Lum}, 
+\label{eq:eq2}
+\end{equation}    
+where $Acc$ is the spectrometer acceptance, $Eff$ the efficiency for 
+analysis cuts, and $Lum$ the effective luminosity including the 
+data-acquisition deadtime. 
+
 \todo{describe the extracted cross section and how it compared with predictions}
 \begin{figure*}
 	\begin{subfigure}{0.45\linewidth}
@@ -208,6 +220,23 @@ are obtained:
 	\caption{The measured $\dv{\sigma}{x_F}$ for $J/\psi$ and $\psi'$ compared with NRQCD calculations}
 	\label{fig:xF_cross_sections}
 \end{figure*}
+
+\todo{describe the $\sigma_{\psi'}/\sigma{J/\psi}$ ratio\\
+	the $\psi'$ distribution is expected to be wider than that of $J/\psi$ as the $q\bar{q}$ is more important
+}
+\begin{figure*}
+	\begin{subfigure}{0.45\linewidth}
+		\includegraphics[width=\linewidth]{figures/crossSections/xF/ratio_xF_LH2_5-6_5770}
+	\end{subfigure}
+	\begin{subfigure}{0.45\linewidth}
+		\includegraphics[width=\linewidth]{figures/crossSections/xF/ratio_xF_LD2_5-6_5770}
+	\end{subfigure}
+	\caption{The measured $\sigma_{\psi'}/\sigma{J/\psi}$ ratio compared with NRQCD calculations}
+	\label{fig:psip_jpsi_ratio_xF}
+\end{figure*}
+
+\todo{described the $P_T$ distribution and the fit, need to add a table of $\expval{P_T}$}
+
 
 \todo{The measured $\expval{P_T^2}$ vs $\sqrt{s}$ from different experiments}
 \begin{figure}
