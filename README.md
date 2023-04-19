@@ -1,4 +1,4 @@
-# J/psi paper
+# $J/\psi$ paper
 To compile, simply use 
 ```
 latexmk 
