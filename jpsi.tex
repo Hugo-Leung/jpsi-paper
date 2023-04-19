@@ -1,4 +1,4 @@
-\documentclass[twocolumn,aps,unsortedaddress,superscriptaddress,prd,floatfix,showpacs,linenumbers]{revtex4-2}
+\documentclass[reprint,aps,unsortedaddress,superscriptaddress,prd,floatfix,showpacs,linenumbers]{revtex4-2}
 \usepackage[utf8]{inputenc}
 \usepackage{float}
 \usepackage{graphicx}
@@ -16,20 +16,20 @@
 \DeclareSIUnit\barn{b}
 
 \begin{document}
-\title{Measurement of $(p+d) / (p+p)$ cross section ratios for
+\title{Measurement of $(p+d)$ and $(p+p)$ cross section for
 	$J/\Psi$ and $\Psi^\prime$ production at \SI{120}{\GeV}}
 \input{author}
 
 \date{\today}
 \begin{abstract}
 	High-mass dimuon production in $p+p$ and $p+d$ interaction has been measured
-	in the SeaQuest experiment with 120 GeV proton beam at Fermilab.
+	in the SeaQuest experiment with \SI{120}{\GeV} proton beam at Fermilab.
 	We report the $(p+d) / (p+p)$ cross section
 	ratios for $J/\Psi$ and $\psi^\prime$ production covering the forward
 	rapidity region of $0.3 < x_F <0.8$. Unlike the recently reported
 	$(p+d) / (p+p)$ Drell-Yan cross section ratios from SeaQuest, which are
 	sensitive to the
-	$\bar d / \bar u$ antiquark distributions in the proton, the corresponding
+	$\bar{d} / \bar{u}$ antiquark distributions in the proton, the corresponding
 	cross section ratios for charmonium production are primarily
 	sensitive to the gluon
 	distributions in the proton and neutron. We compare the measured
@@ -50,7 +50,7 @@ including liquid hydrogen and deuterium and solid nuclear targets. Dimuons
 originating from the Drell-Yan process~\cite{drell1970} as well as from the decay of quarkonium
 states ($J/\Psi$ and $\Psi^\prime$) have been collected simultaneously. 
 Results of the $(p+d) / (p+p)$ Drell-Yan cross section ratios, which are sensitive
-to the flavor asymmetry of $\bar d / \bar u$ in the proton, have been reported
+to the flavor asymmetry of $\bar{d}/ \bar{u}$ in the proton, have been reported
 recently~\cite{dove2021,dove2023}. In this paper, we report the 
 $p+p$ and $p+p$ cross section for the $J/\Psi$ and $\Psi^\prime$ charmonium production.
 
@@ -88,7 +88,7 @@ and the empty flask targets. A Beam Intensity Monitor (BIM) Cherenkov counter
 was placed in the beam to record the instantaneous proton intensity for 
 each 1-ns long RF bucket at \SI{53}{\MHz} repetition rate. The BIM is essential
 for measuring the integrated beam luminosity, and to inhibit triggers
-occuring within RF buckets containing large number of protons 
+occurring within RF buckets containing large number of protons 
 exceeding a preset threshold. This significantly reduces the data-acquisition
 deadtime by rejecting at the trigger level those events which are potentially
 too noisy to be reliably reconstructed.  
@@ -122,7 +122,8 @@ multiple scattering of muons in the iron magnet.
 
 \todo{explain mass fit, refer to long paper}
 \begin{figure}
-	\missingfigure{mass fit plot for $p+p$}
+	\includegraphics[width=\linewidth]{massFit/LH2_massfit}
+	\todo{revisit style of massfit, might use figure in long paper}
 	\caption{Dimuon mass distribution for data collected on liquid hydrogen target
 		after all analysis cuts.}
 	\label{fig:massfit_LH2}
@@ -146,12 +147,13 @@ reflected in the "random" trigger data, are properly taken into account.
 Third, the dimuons orginating from the Drell-Yan process are simulated
 by the M-C, as shown in the dashed curve in \cref{fig:massfit_LH2}. These M-C
 Drell-Yan events were generated using next-to-leading order
-calculations and the CTEQ14 parton distributions,
+calculations and the CT14 parton distributions,
 which reproduce the $\bar{d}/ \bar{u}$ asymmetry in the $x < 0.3$ region.
 The same embedding procedure was also applied to the Drell-Yan M-C data.
 
 \begin{figure}
-	\missingfigure{mass fit plot for $p+d$}
+	\includegraphics[width=\linewidth]{massFit/LD2_massfit}
+	\todo{revisit style of massfit, might use figure in long paper}
 	\caption{Same as \cref{fig:massfit_LH2}, but for data collected on the liquid
 		deuterium target.}
 	\label{fig:massfit_LD2}
@@ -193,6 +195,8 @@ are obtained:
 \begin{equation}
 	x_1=\frac{P_2\cdot Q}{P_2 \cdot \left(P_1 + P_2\right)} \textrm{ and } x_2=\frac{P_1\cdot Q}{P_1 \cdot \left(P_1 + P_2\right)} 
 \end{equation}
+where $P_1$ and $P_2$ are the four momenta of the projectile and target hadron,
+respectively.
 
 \section{\texorpdfstring{$J/\psi$}{J/psi} and \texorpdfstring{$\psi'$}{psi'} Cross Section}
 \label{sec:cross_section}
@@ -217,7 +221,8 @@ data-acquisition deadtime.
 	\begin{subfigure}{0.45\linewidth}
 		\includegraphics[width=\linewidth]{figures/crossSections/xF/combine_xF_LD2_5-6_5770_psip}
 	\end{subfigure}
-	\caption{The measured $\dv{\sigma}{x_F}$ for $J/\psi$ and $\psi'$ compared with NRQCD calculations}
+	\caption{The measured $\dv{\sigma}{x_F}$ for $J/\psi$ and $\psi'$. The curves correspond to NRQCD
+		calculations using the LDMEs obtained in Ref.~\cite{hsieh2021} and the CT14 PDF.}
 	\label{fig:xF_cross_sections}
 \end{figure*}
 
@@ -231,24 +236,28 @@ data-acquisition deadtime.
 	\begin{subfigure}{0.45\linewidth}
 		\includegraphics[width=\linewidth]{figures/crossSections/xF/ratio_xF_LD2_5-6_5770}
 	\end{subfigure}
-	\caption{The measured $\sigma_{\psi'}/\sigma{J/\psi}$ ratio compared with NRQCD calculations}
+	\caption{The measured $\sigma_{\psi'}/\sigma_{J/\psi}$ ratio compared with NRQCD calculations}
 	\label{fig:psip_jpsi_ratio_xF}
 \end{figure*}
 
 \todo{described the $P_T$ distribution and the fit, need to add a table of $\expval{P_T}$}
-
+\begin{figure*}
+	\missingfigure{$P_T$ distribution. Need to decide the format of the figure.}
+	\caption{The measured $\dv{\sigma}{P_T^2}$ for $J/\psi$ and $\psi'$}
+	\label{fig:pT_cross_sections}
+\end{figure*}
 
 \todo{The measured $\expval{P_T^2}$ vs $\sqrt{s}$ from different experiments}
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{crossSections/pT/pT_s_release}
-	\caption{The measured $\expval{P_T^2}$ from SeaQuest for $p+p\rightarrow J/\psi$ compared with other experiments }
+	\caption{The measured $\expval{P_T^2}$ from SeaQuest for $p+p\rightarrow J/\psi$ compared with other experiments \cite{clark1978,drapier1998,acharya2020}}
 	\label{fig:pt_s}
 \end{figure}
 
 \section{$(p+d)/(p+p)$ Cross Section Ratio}
-\todo{comparison with NA51}
 \label{sec:CSR}
+\todo{comparison with NA51}
 \begin{figure}
 	\missingfigure{$pd/pp$ cross section ratio }
 	\caption{The $pd/pp$ cross section ratio for Drell-Yan process, $J/\psi$ and $\psi'$}
