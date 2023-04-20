@@ -63,6 +63,42 @@ fusion processes. The simultaneous measurement of these two very different
 processes, Drell-Yan and charmonium production, provides complimentary
 information on the partonic structures of the nucleon.
 
+From the consideration of charge symmetry (CS), which corresponds to an 
+invariance under a rotation of $180^\circ$ along the second axis of the 
+isospin space, the gluon distribution in the proton should be identical
+to that of the neutron. This reflects the iso-scalar nature of the gluon.
+Evidence for a small violation of charge symmetry has been
+reported in some interactions
+involving hadrons, such as the $d d \to {\pi^0}~^4\mbox{He}$ 
+reaction~\cite{opper2003} 
+and the $n p \to \pi^0 d$ reaction~\cite{stephenson2003}. 
+Charge symmetry is also predicted to be violated at the
+partonic level, although there exists no experimental evidence 
+so far for such violations~\cite{londergan2010}. A sensitive measurement of the 
+gluon contents in proton and deuteron could provide a test of CS at 
+the partonic level~\cite{piller1996,zhu2008}.
+
+While proton-induced charmonium production is expected to be dominated
+by the gluon-gluon fusion process~\cite{vogt1999}, some contributions from the
+quark-antiquark annihilation process is also anticipated. The relative 
+importance of these two
+processes is expected to depend on the total energy of the colliding hadrons
+as well as the Feynman-$x$ ($x_F$) of the
+charmonium~\cite{peng1995}. The quark-antiquark annihilation is sensitive to the
+$\bar d / \bar u$ flavor asymmetry in the proton, while the 
+gluon-gluon fusion is expected to be similar for the reaction
+on hydrogen and deuterium targets. Therefore, the $x_F$ dependence
+of the $(p+d) / (p+p)$ cross section ratio for $J/\Psi$ production could reveal 
+the relative importance of these two processes.
+
+The NA51 Collaboration reported a measurement of the $(p+d)$ and $ (p+p)$ cross 
+section for charmonium production at 450 GeV at a single value of
+rapidity~\cite{abreu1998}. The present measurement covers the kinematic range
+of $0.3 < x_F < 0.8$. The 120 GeV beam energy
+in the SeaQuest experiment is expected to probe
+the parton distribution at larger values of $x$, the fractional momentum
+carried by the partons, than probed by the NA51 experiment at 450 GeV.
+
 \todo{explain the scope of the paper}
 The organization of this paper is as follows. Following this introduction, the 
 SeaQuest experiments will be described in \cref{sec:SeaQuest}. \Cref{sec:analysis}
@@ -189,8 +225,8 @@ We recall the following definitions of the kinematic variable:
 \end{equation}
 where $P_L$ is the longitudinal momentum of the $J/\psi$ and $P_{max}$ is
 the maximum momentum for the $J/\psi$ in the hadron-hadron center-of-mass
-frame. $M$ and $\sqrt{s}$ are the $J/\psi$ and the hadron-hadron total energy,
-repectively. From the $J/\psi$ four momentum $Q$, the variable $x_1$ and $x_2$
+frame. $M$ and $\sqrt{s}$ are the $J/\psi$ mass and the hadron-hadron total energy,
+respectively. From the $J/\psi$ four momentum $Q$, the variable $x_1$ and $x_2$
 are obtained:
 \begin{equation}
 	x_1=\frac{P_2\cdot Q}{P_2 \cdot \left(P_1 + P_2\right)} \textrm{ and } x_2=\frac{P_1\cdot Q}{P_1 \cdot \left(P_1 + P_2\right)} 
@@ -221,12 +257,18 @@ data-acquisition deadtime.
 	\begin{subfigure}{0.45\linewidth}
 		\includegraphics[width=\linewidth]{figures/crossSections/xF/combine_xF_LD2_5-6_5770_psip}
 	\end{subfigure}
-	\caption{The measured $\dv{\sigma}{x_F}$ for $J/\psi$ and $\psi'$. The curves correspond to NRQCD
-		calculations using the LDMEs obtained in Ref.~\cite{hsieh2021} and the CT14 PDF.}
+	\caption{The measured $d\sigma /d x_F$ for $J/\psi$ and $\psi'$. The curves correspond to NRQCD
+		calculations using the LDMEs obtained from Ref.~\cite{hsieh2021} and the CT14 PDF.}
 	\label{fig:xF_cross_sections}
 \end{figure*}
+The measured $d\sigma /d x_F$ for both $J/\psi$ and $\psi'$. from SeaQuest are shown in 
+\cref{fig:xF_cross_sections}, and are compared with NRQCD calculations with LDMEs obtained
+from Ref.~\cite{hsieh2021}. The magnitude and the shape of the extracted $J/\psi$ cross
+sections are also in good agreement with the NRQCD calculation. However, the extracted 
+$\psi'$ cross section is considerably wider than the expectation.
 
-\todo{describe the $\sigma_{\psi'}/\sigma{J/\psi}$ ratio\\
+
+\todo{describe the $\sigma_{\psi'}/\sigma_{J/\psi}$ ratio\\
 	the $\psi'$ distribution is expected to be wider than that of $J/\psi$ as the $q\bar{q}$ is more important
 }
 \begin{figure*}
@@ -241,9 +283,11 @@ data-acquisition deadtime.
 \end{figure*}
 
 \todo{described the $P_T$ distribution and the fit, need to add a table of $\expval{P_T}$}
+\Cref{fig:pT_cross_sections} displays the differential charmonium production cross section $d\sigma/d P_T^2$
+per nucleon versus the transverse momentum. 
 \begin{figure*}
 	\missingfigure{$P_T$ distribution. Need to decide the format of the figure.}
-	\caption{The measured $\dv{\sigma}{P_T^2}$ for $J/\psi$ and $\psi'$}
+	\caption{The measured $d\sigma/d P_T^2$ for $J/\psi$ and $\psi'$}
 	\label{fig:pT_cross_sections}
 \end{figure*}
 
@@ -258,8 +302,14 @@ data-acquisition deadtime.
 \section{$(p+d)/(p+p)$ Cross Section Ratio}
 \label{sec:CSR}
 \todo{comparison with NA51}
+As a result of the identical target geometry
+of the two liquid targets and the frequent interchange between the targets,
+many of the systematic uncertainties encountered in evaluating $\sigma$
+are correlated for the hydrogen and deuterium targets. Hence, most of these
+systematic uncertainties cancel out in the ratio of $(p+d)/(p+p)$ cross
+sections.
 \begin{figure}
-	\missingfigure{$pd/pp$ cross section ratio }
+	\missingfigure{$pd/pp$ cross section ratio vs $x_F$, compared with DY}
 	\caption{The $pd/pp$ cross section ratio for Drell-Yan process, $J/\psi$ and $\psi'$}
 	\label{fig:pd/pp_csr}
 \end{figure}
