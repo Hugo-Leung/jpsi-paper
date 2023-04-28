@@ -248,7 +248,6 @@ The quarkonium production cross section is obtained from the yields ($Y$) as fol
 where $Acc$ is the spectrometer acceptance, $Eff$ the efficiency for
 analysis cuts, and $Lum$ the effective luminosity including the
 data-acquisition deadtime.
-
 \todo{describe the extracted cross section and how it compared with predictions}
 \begin{figure*}[h]
 	\begin{subfigure}{0.45\linewidth}
@@ -261,14 +260,23 @@ data-acquisition deadtime.
 		calculations using the LDMEs obtained from Ref.~\cite{hsieh2021} and the CT14 PDF.}
 	\label{fig:xF_cross_sections}
 \end{figure*}
-The measured $d\sigma /d x_F$ for both $J/\psi$ and $\psi'$. from SeaQuest are shown in
-\cref{fig:xF_cross_sections}, and are compared with NRQCD calculations with LDMEs obtained
-from Ref.~\cite{hsieh2021}. The magnitude and the shape of the extracted $J/\psi$ cross
-sections are also in good agreement with the NRQCD calculation. However, the extracted
-$\psi'$ cross section is considerably wider than the expectation.
 
-\todo{Brief description of the NRQCD calculation.}
+\todo{Need detail of the NRQCD calculation.}
+To compare the measured cross section for charmonium 
+production with theoretical expectation, we have preform calculation
+using the Next-to-Leading order (NLO) non-relativistic QCD (NRQCD)
+framework \cite{bodwin1995}. The production of the $c\bar{c}$ pair proceeds
+through a short-distance partonic interaction, calculated using perturbative QCD.
+The probability of hadronization of a $c\bar{c}$ pair into some charmonium bound
+state depends on its spin, color and angular momentum.
+Being of a non-perturbative nature, the hadronization is described by the associated
+long-distance matrix elements (LDMEs). The LDMEs used are taken from Ref.~\cite{hsieh2021}.
 
+The magnitude and the shape of the extracted $J/\psi$ cross sections,
+shown in \cref{fig:xF_cross_sections}, are in good agreement with the NRQCD calculation. 
+However, the extracted $\psi'$ cross section is considerably wider than the expectation.
+This new data could be used to further constrain the LDMEs, particularly for the $\psi'$
+production.
 \todo{describe the $\sigma_{\psi'}/\sigma_{J/\psi}$ ratio\\
 	the $\psi'$ distribution is expected to be wider than that of $J/\psi$ as the $q\bar{q}$ is more important
 }
@@ -282,10 +290,24 @@ $\psi'$ cross section is considerably wider than the expectation.
 	\caption{The measured $\sigma_{\psi'}/\sigma_{J/\psi}$ ratio compared with NRQCD calculations}
 	\label{fig:psip_jpsi_ratio_xF}
 \end{figure*}
+\Cref{fig:psip_jpsi_ratio_xF} shows to ratio of $\sigma_{\psi'}$ to $\sigma_{J/\psi}$.
+The ratio shows a clear $x_F$ dependence, and the measured ratio increases as $x_F$ increases.
+
 
 \todo{described the $P_T$ distribution and the fit, need to add a table of $\expval{P_T}$}
 \Cref{fig:pT_cross_sections} displays the differential charmonium production cross section $d\sigma/d P_T^2$
-per nucleon versus the transverse momentum.
+per nucleon versus the transverse momentum. The transverse momentum distributions are fitted to the
+following function\cite{kaplan1978}
+\begin{equation}
+	f\left(P_T^2\right) \propto \frac{1}{\left(1+ P_T^2/p_1^2\right)^6},
+	\label{eq:kaplan}
+\end{equation}
+The parameter $p_1$ controls the broadness of the $P_T$ distribution. And is
+related to the average $P_T$ as follows
+\begin{equation}
+	\expval{P_T}    = \frac{35\pi p_1}{256}, \quad \mathrm{and}\quad
+	\expval{P_T^2}  = \frac{p_1^2}{4}.
+\end{equation}
 \begin{figure*}[h]
 	\missingfigure{$P_T$ distribution. Need to decide the format of the figure.}
 	\caption{The measured $d\sigma/d P_T^2$ for $J/\psi$ and $\psi'$}
@@ -293,6 +315,15 @@ per nucleon versus the transverse momentum.
 \end{figure*}
 
 \todo{The measured $\expval{P_T^2}$ vs $\sqrt{s}$ from different experiments}
+\Cref{fig:pt_s} shows the extracted $\expval{P_T^2}$ for $p+p\rightarrow J/\psi$ as a function
+of $\sqrt{s}$ from SeaQuest compared with different experiments
+\cite{badier1983,clark1978,drapier1998,acharya2020}. The $\expval{P_T^2}$ follows an
+increasing pattern versus $\sqrt{s}$ over a wide range of energies.
+The data points are also fitted to the following form, taken from Ref.~\cite{acharya2020}.
+\begin{equation}
+	\expval{P_T^2}=a\ln{\left( \frac{\sqrt{s}}{b} \right)},
+\end{equation}
+with $a=1.221\pm0.038$ and $b=7.59\pm0.31$.
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{crossSections/pT/pT_s_release}
