@@ -12,6 +12,7 @@
 \usepackage{cleveref}
 \usepackage[obeyFinal]{todonotes}
 \setuptodonotes{inline}
+\usepackage{multirow}
 \graphicspath{{figures/}}
 \DeclareSIUnit\barn{b}
 
@@ -52,7 +53,7 @@ states ($J/\Psi$ and $\Psi^\prime$) have been collected simultaneously.
 Results of the $(p+d) / (p+p)$ Drell-Yan cross section ratios, which are sensitive
 to the flavor asymmetry of $\bar{d}/ \bar{u}$ in the proton, have been reported
 recently~\cite{dove2021,dove2023}. In this paper, we report the
-$p+p$ and $p+p$ cross section for the $J/\Psi$ and $\Psi^\prime$ charmonium production.
+$p+p$ and $p+d$ cross section for the $J/\Psi$ and $\Psi^\prime$ charmonium production.
 
 \todo{explain the interest of studying the charmomnium}
 Unlike the Drell-Yan process which primarily involves the annihilation
@@ -70,8 +71,8 @@ to that of the neutron. This reflects the iso-scalar nature of the gluon.
 Evidence for a small violation of charge symmetry has been
 reported in some interactions
 involving hadrons, such as the $d d \to {\pi^0}~^4\mbox{He}$
-reaction~\cite{opper2003}
-and the $n p \to \pi^0 d$ reaction~\cite{stephenson2003}.
+reaction~\cite{stephenson2003}
+and the $n p \to \pi^0 d$ reaction~\cite{opper2003}.
 Charge symmetry is also predicted to be violated at the
 partonic level, although there exists no experimental evidence
 so far for such violations~\cite{londergan2010}. A sensitive measurement of the
@@ -262,21 +263,70 @@ data-acquisition deadtime.
 \end{figure*}
 
 \todo{Need detail of the NRQCD calculation.}
-To compare the measured cross section for charmonium 
+To compare the measured cross section for charmonium
 production with theoretical expectation, we have preform calculation
 using the Next-to-Leading order (NLO) non-relativistic QCD (NRQCD)
-framework \cite{bodwin1995}. The production of the $c\bar{c}$ pair proceeds
+framework \cite{bodwin1995}. In this framework, the differential cross section
+for a charmonium state $H$ ($H=J/\psi, \psi'$) is given by
+\begin{widetext}
+	\begin{equation}
+		\begin{split}
+			\frac{d\sigma^H}{dx_F} &=\sum_{i,j = q,\bar{q},G}\int^1_0 dx_1 dx_2 \delta(x_F-x_1+x_2)\\
+			&\cross f_{i/A}\left(x_1,\mu_F\right)f_{j/B}\left(x_2,\mu_F\right)\hat{\sigma}\left[ij\rightarrow H\right]\left(x_1P_A,x_2P_B,\mu_F,\mu_R , m_c\right),
+		\end{split}
+	\end{equation}
+	\begin{equation}
+		\hat{\sigma}\left[ij\rightarrow H\right]= \sum_n C^{ij}_{c\bar{c}\left[n\right]}\left(x_1P_A,x_2P_B,\mu_F,\mu_R , m_c\right)\expval{O^H_n \left[^{2S+1}L_J\right]},
+	\end{equation}
+\end{widetext}
+where $i$ and $j$ label the type of interacting partons (gluons, quarks and antiquarks)
+and the $c\bar{c}$ pair produced in detonated by it color ($n$), spin ($S$),
+orbital angular momentum ($L$) and total angular momentum ($J$).
+The production of the $c\bar{c}$ pair ($C^{ij}_{c\bar{c}\left[n\right]}$) proceeds
 through a short-distance partonic interaction, calculated using perturbative QCD.
 The probability of hadronization of a $c\bar{c}$ pair into some charmonium bound
 state depends on its spin, color and angular momentum.
 Being of a non-perturbative nature, the hadronization is described by the associated
-long-distance matrix elements (LDMEs). The LDMEs used are taken from Ref.~\cite{hsieh2021}.
+long-distance matrix elements (LDMEs) ($\expval{O^H_n \left[^{2S+1}L_J\right]}$).
+The LDMEs are mainly determined by a fit to data and assumed to be universal, independent of beam or target hadrons and the energy scale. The LDMEs used in the calculation are taken from Ref.~\cite{hsieh2021}.
 
 The magnitude and the shape of the extracted $J/\psi$ cross sections,
-shown in \cref{fig:xF_cross_sections}, are in good agreement with the NRQCD calculation. 
+shown in \cref{fig:xF_cross_sections}, are in good agreement with the NRQCD calculation.
 However, the extracted $\psi'$ cross section is considerably wider than the expectation.
 It is possible the LDMEs used in for the $\psi'$ cross section calculation is not fully optimized.
-This new result on the $\psi'$ cross section can be used in further constrain the LDMEs. 
+This new result on the $\psi'$ cross section can be used in further constrain the LDMEs.
+
+\begin{table*}[ht]
+	\caption{The differential cross section for $p+p$ to $J/\psi$ and $\psi'$  as well as the ratio of
+		$\sigma_{\psi'}/\sigma_{J\psi}$ for each $x_F$ bin. The first uncertainty  statistical, the second systematic. }
+	\todo{verify final result, only run 5-6 data is shown right now.}
+	\label{tab:pp_cs_xF}
+	\begin{tabular}{c|ccccc}
+		\hline
+		$x_F$ range & $\expval{x_F}_{J/\psi}$ & $\left.d\sigma/dx_F\right|_{J/\psi}$ & $\expval{x_F}_{\psi'}$ & $\left.d\sigma/dx_F\right|_{J/\psi}$ & $\sigma_{\psi'}/\sigma_{J\psi}$ \\ \hline
+		$0.40-0.60$ & 0.527                   & $8.219\pm0.458\pm0.616$              & 0.509                  & $1.6087\pm0.2052\pm0.2854$           & $0.196\pm0.027\pm0.019$         \\
+		$0.60-0.65$ & 0.625                   & $3.021\pm0.161\pm0.283$              & 0.624                  & $0.9339\pm0.0918\pm0.1082$           & $0.309\pm0.035\pm0.006$         \\
+		$0.65-0.70$ & 0.672                   & $1.759\pm0.087\pm0.151$              & 0.671                  & $0.5647\pm0.0624\pm0.0845$           & $0.321\pm0.039\pm0.019$         \\
+		$0.70-0.77$ & 0.733                   & $0.921\pm0.008\pm0.087$              & 0.734                  & $0.3546\pm0.0293\pm0.0394$           & $0.385\pm0.032\pm0.006$         \\
+		$0.77-0.95$ & 0.817                   & $0.173\pm0.008\pm0.018$              & 0.825                  & $0.0641\pm0.0099\pm0.0177$           & $0.371\pm0.060\pm0.057$         \\ \hline
+	\end{tabular}
+\end{table*}
+
+\begin{table*}[ht]
+	\caption{The differential cross section for $p+d$ to $J/\psi$ and $\psi'$  as well as the ratio of
+		$\sigma_{\psi'}/\sigma_{J\psi}$ for each $x_F$ bin. The first uncertainty  statistical, the second systematic. }
+	\todo{verify final result, only run 5-6 data is shown right now.}
+	\label{tab:pd_cs_xF}
+	\begin{tabular}{c|ccccc}
+		\hline
+		$x_F$ range & $\expval{x_F}_{J/\psi}$ & $\left.d\sigma/dx_F\right|_{J/\psi}$ & $\expval{x_F}_{\psi'}$ & $\left.d\sigma/dx_F\right|_{J/\psi}$ & $\sigma_{\psi'}/\sigma_{J\psi}$ \\ \hline
+		$0.40-0.60$ & 0.527                   & $9.184\pm0.378\pm0.579$              & 0.509                  & $1.9688\pm0.1446\pm0.2002$           & $0.214\pm0.018\pm0.008$         \\
+		$0.60-0.65$ & 0.624                   & $2.893\pm0.178\pm0.468$              & 0.624                  & $0.8713\pm0.1083\pm0.1862$           & $0.301\pm0.042\pm0.013$         \\
+		$0.65-0.70$ & 0.672                   & $1.834\pm0.089\pm0.171$              & 0.672                  & $0.6963\pm0.0639\pm0.0523$           & $0.380\pm0.039\pm0.006$         \\
+		$0.70-0.77$ & 0.733                   & $0.949\pm0.041\pm0.102$              & 0.733                  & $0.3520\pm0.0355\pm0.0448$           & $0.371\pm0.041\pm0.006$         \\
+		$0.77-0.95$ & 0.819                   & $0.180\pm0.008\pm0.015$              & 0.826                  & $0.0630\pm0.0114\pm0.0147$           & $0.351\pm0.065\pm0.049$         \\ \hline
+	\end{tabular}
+\end{table*}
 
 \todo{describe the $\sigma_{\psi'}/\sigma_{J/\psi}$ ratio\\
 	the $\psi'$ distribution is expected to be wider than that of $J/\psi$ as the $q\bar{q}$ is more important
@@ -311,12 +361,40 @@ related to the average $P_T$ as follows
 \begin{equation}
 	\expval{P_T}    = \frac{35\pi p_1}{256}, \quad \mathrm{and}\quad
 	\expval{P_T^2}  = \frac{p_1^2}{4}.
+	\label{eq:pT_kaplan}
 \end{equation}
 \begin{figure*}[h]
-	\missingfigure{$P_T$ distribution. Need to decide the format of the figure.}
-	\caption{The measured $d\sigma/d P_T^2$ for $J/\psi$ and $\psi'$}
+	\begin{subfigure}{0.45\linewidth}
+		\includegraphics[width=\linewidth]{crossSections/pT/5-6_pTsq_LH2.pdf}
+	\end{subfigure}
+	\begin{subfigure}{0.45\linewidth}
+		\includegraphics[width=\linewidth]{crossSections/pT/5-6_pTsq_LD2.pdf}
+	\end{subfigure}
+	\todo{only Run 5-6 is included here}
+	\caption{The measured $d\sigma/d P_T^2$ for $J/\psi$ and $\psi'$ for $p+p$ (left) and $p+d$ (right).}
 	\label{fig:pT_cross_sections}
 \end{figure*}
+The extracted $\expval{P_T}$ for $J/\psi$ and $\psi'$ are listed in \cref{tab:kaplan_result}.
+\begin{table*}[h!]
+	\centering
+	\caption{Extracted $\expval{P_T}$ and $\expval{P^2_T}$ for $J/\psi$ and $\psi'$ in $p+p$ and $p+d$
+		with both statistical and systematic uncertainties.	The $\expval{P_T}$ and $\expval{P^2_T}$ are evaluated
+		using \cref{eq:pT_kaplan}.}
+	\label{tab:kaplan_result}
+	\begin{tabular}{cc|c|>{\centering}m{4cm}|>{\centering}m{4cm}|m{4cm}<{\centering}}
+		\hline
+		                                               &                        & run & $p_1$                   & $\expval{P_T} (\unit{\GeV})$ & $\expval{P^2_T} (\unit{\square\GeV})$ \\ \hline
+		\multicolumn{1}{c|}{\multirow{4}{*}{$J/\psi$}} & \multirow{2}{*}{$p+p$} & 2-3 & $1.729\pm0.053\pm0.055$ & $0.743\pm0.023\pm0.024$      & $0.747\pm0.046\pm0.048$               \\ \cline{3-6}
+		\multicolumn{1}{c|}{}                          &                        & 5-6 & $1.663\pm0.042\pm0.018$ & $0.714\pm0.018\pm0.008$      & $0.692\pm0.035\pm0.015$               \\ \cline{2-6}
+		\multicolumn{1}{c|}{}                          & \multirow{2}{*}{$p+d$} & 2-3 & $1.719\pm0.055\pm0.138$ & $0.739\pm0.024\pm0.059$      & $0.739\pm0.047\pm0.119$               \\ \cline{3-6}
+		\multicolumn{1}{c|}{}                          &                        & 5-6 & $1.670\pm0.045\pm0.030$ & $0.717\pm0.019\pm0.013$      & $0.697\pm0.037\pm0.025$               \\ \hline
+		\multicolumn{1}{c|}{\multirow{4}{*}{$\psi'$}}  & \multirow{2}{*}{$p+p$} & 2-3 & $1.587\pm0.051\pm0.193$ & $0.681\pm0.022\pm0.083$      & $0.629\pm0.041\pm0.153$               \\ \cline{3-6}
+		\multicolumn{1}{c|}{}                          &                        & 5-6 & $1.675\pm0.055\pm0.074$ & $0.720\pm0.024\pm0.032$      & $0.702\pm0.046\pm0.062$               \\ \cline{2-6}
+		\multicolumn{1}{c|}{}                          & \multirow{2}{*}{$p+d$} & 2-3 & $1.593\pm0.058\pm0.205$ & $0.684\pm0.025\pm0.088$      & $0.634\pm0.046\pm0.164$               \\ \cline{3-6}
+		\multicolumn{1}{c|}{}                          &                        & 5-6 & $1.597\pm0.055\pm0.110$ & $0.686\pm0.024\pm0.047$      & $0.637\pm0.044\pm0.088$               \\ \hline
+	\end{tabular}
+\end{table*}
+
 
 \todo{The measured $\expval{P_T^2}$ vs $\sqrt{s}$ from different experiments}
 \Cref{fig:pt_s} shows the extracted $\expval{P_T^2}$ for $p+p\rightarrow J/\psi$ as a function
@@ -357,12 +435,23 @@ cross section ratios clearly reflect the different underlying mechanisms in
 these two processes.
 \begin{figure}
 	\missingfigure{$pd/pp$ cross section ratio vs $x_F$, compared with DY}
-	\caption{The $pd/pp$ cross section ratio for Drell-Yan process, $J/\psi$ and $\psi'$}
+	\caption{The $p+d/p+p$ per nucleon cross section ratios for $J/\Psi$ and
+		$\Psi^\prime$ versus $x_F$. Both the result from the SeaQuest at 120 GeV proton
+		beam energy and that from the NA51 measurement~\cite{abreu1998} with 450
+		GeV proton are shown.
+		For comparison, the ratios for the Drell-Yan cross sections~\cite{dove2023} are
+		also shown. The solid curve is the calculation for the $J/\Psi$ cross section
+		ratios at 120 GeV in the NLO CEM model using the CT18NLO PDFs. The dashed
+		curve represents the NLO Drell-Yan cross section ratios calculated with the
+		same PDFs~\cite{dove2023}.}
 	\label{fig:pd/pp_csr}
 \end{figure}
 
 \section{Conclusions}
 \label{sec:Conclusions}
+
+\begin{acknowledgments}
+\end{acknowledgments}
 
 \nocite{*}
 \bibliography{reference}
