@@ -272,11 +272,11 @@ for a charmonium state $H$ ($H=J/\psi, \psi'$) is given by
 	\begin{equation}
 		\begin{split}
 			\frac{d\sigma^H}{dx_F} &=\sum_{i,j = q,\bar{q},G}\int^1_0 dx_1 dx_2 \delta(x_F-x_1+x_2)\\
-			&\cross f_{i/A}\left(x_1,\mu_F\right)f_{j/B}\left(x_2,\mu_F\right)\hat{\sigma}\left[ij\rightarrow H\right]\left(x_1P_A,x_2P_B,\mu_F,\mu_R , m_c\right),
+			&\cross f_{i/A}\left(x_1,\mu_F\right)f_{j/B}\left(x_2,\mu_F\right)\hat{\sigma}\left[ij\to H\right]\left(x_1P_A,x_2P_B,\mu_F,\mu_R , m_c\right),
 		\end{split}
 	\end{equation}
 	\begin{equation}
-		\hat{\sigma}\left[ij\rightarrow H\right]= \sum_n C^{ij}_{c\bar{c}\left[n\right]}\left(x_1P_A,x_2P_B,\mu_F,\mu_R , m_c\right)\expval{O^H_n \left[^{2S+1}L_J\right]},
+		\hat{\sigma}\left[ij\to H\right]= \sum_n C^{ij}_{c\bar{c}\left[n\right]}\left(x_1P_A,x_2P_B,\mu_F,\mu_R , m_c\right)\expval{O^H_n \left[^{2S+1}L_J\right]},
 	\end{equation}
 \end{widetext}
 where $i$ and $j$ label the type of interacting partons (gluons, quarks and antiquarks)
@@ -298,18 +298,9 @@ This new result on the $\psi'$ cross section can be used in further constrain th
 
 \begin{table*}[ht]
 	\caption{The differential cross section for $p+p$ to $J/\psi$ and $\psi'$  as well as the ratio of
-		$\sigma_{\psi'}/\sigma_{J\psi}$ for each $x_F$ bin. The first uncertainty  statistical, the second systematic. }
-	\todo{verify final result, only run 5-6 data is shown right now.}
+		for each $x_F$ bin. The first uncertainty  statistical, the second systematic. }
 	\label{tab:pp_cs_xF}
-	\begin{tabular}{c|ccccc}
-		\hline
-		$x_F$ range & $\expval{x_F}_{J/\psi}$ & $\left.d\sigma/dx_F\right|_{J/\psi}$ & $\expval{x_F}_{\psi'}$ & $\left.d\sigma/dx_F\right|_{J/\psi}$ & $\sigma_{\psi'}/\sigma_{J\psi}$ \\ \hline
-		$0.40-0.60$ & 0.527                   & $8.219\pm0.458\pm0.616$              & 0.509                  & $1.6087\pm0.2052\pm0.2854$           & $0.196\pm0.027\pm0.019$         \\
-		$0.60-0.65$ & 0.625                   & $3.021\pm0.161\pm0.283$              & 0.624                  & $0.9339\pm0.0918\pm0.1082$           & $0.309\pm0.035\pm0.006$         \\
-		$0.65-0.70$ & 0.672                   & $1.759\pm0.087\pm0.151$              & 0.671                  & $0.5647\pm0.0624\pm0.0845$           & $0.321\pm0.039\pm0.019$         \\
-		$0.70-0.77$ & 0.733                   & $0.921\pm0.008\pm0.087$              & 0.734                  & $0.3546\pm0.0293\pm0.0394$           & $0.385\pm0.032\pm0.006$         \\
-		$0.77-0.95$ & 0.817                   & $0.173\pm0.008\pm0.018$              & 0.825                  & $0.0641\pm0.0099\pm0.0177$           & $0.371\pm0.060\pm0.057$         \\ \hline
-	\end{tabular}
+	\input{table/xF_full_LH2.tex}
 \end{table*}
 
 \begin{table*}[ht]
@@ -319,7 +310,7 @@ This new result on the $\psi'$ cross section can be used in further constrain th
 	\label{tab:pd_cs_xF}
 	\begin{tabular}{c|ccccc}
 		\hline
-		$x_F$ range & $\expval{x_F}_{J/\psi}$ & $\left.d\sigma/dx_F\right|_{J/\psi}$ & $\expval{x_F}_{\psi'}$ & $\left.d\sigma/dx_F\right|_{J/\psi}$ & $\sigma_{\psi'}/\sigma_{J\psi}$ \\ \hline
+		$x_F$ range & $\expval{x_F}_{J/\psi}$ & $\left.d\sigma/dx_F\right|_{J/\psi}$ & $\expval{x_F}_{\psi'}$ & $\left.d\sigma/dx_F\right|_{\psi'}$ & $\sigma_{\psi'}/\sigma_{J\psi}$ \\ \hline
 		$0.40-0.60$ & 0.527                   & $9.184\pm0.378\pm0.579$              & 0.509                  & $1.9688\pm0.1446\pm0.2002$           & $0.214\pm0.018\pm0.008$         \\
 		$0.60-0.65$ & 0.624                   & $2.893\pm0.178\pm0.468$              & 0.624                  & $0.8713\pm0.1083\pm0.1862$           & $0.301\pm0.042\pm0.013$         \\
 		$0.65-0.70$ & 0.672                   & $1.834\pm0.089\pm0.171$              & 0.672                  & $0.6963\pm0.0639\pm0.0523$           & $0.380\pm0.039\pm0.006$         \\
@@ -397,19 +388,20 @@ The extracted $\expval{P_T}$ for $J/\psi$ and $\psi'$ are listed in \cref{tab:ka
 
 
 \todo{The measured $\expval{P_T^2}$ vs $\sqrt{s}$ from different experiments}
-\Cref{fig:pt_s} shows the extracted $\expval{P_T^2}$ for $p+p\rightarrow J/\psi$ as a function
+\Cref{fig:pt_s} shows the extracted $\expval{P_T^2}$ for $p+p\to J/\psi$ as a function
 of $\sqrt{s}$ from SeaQuest compared with different experiments
 \cite{badier1983,clark1978,drapier1998,acharya2020}. The $\expval{P_T^2}$ follows an
-increasing pattern versus $\sqrt{s}$ over a wide range of energies.
-The data points are also fitted to the following form, taken from Ref.~\cite{acharya2020}.
+increasing pattern versus $\sqrt{s}$ over a wide range of energies
+The data points are also fitted to the following form \cite{acharya2020}.
 \begin{equation}
 	\expval{P_T^2}=a\ln{\left( \frac{\sqrt{s}}{b} \right)},
 \end{equation}
-with $a=1.221\pm0.038$ and $b=7.59\pm0.31$.
+with $a=1.221\pm0.038$ and $b=7.59\pm0.31$, although some variation is
+expected due to the differing rapidity ranges of the measurements.
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{crossSections/pT/pT_s_release}
-	\caption{The measured $\expval{P_T^2}$ from SeaQuest for $p+p\rightarrow J/\psi$ compared with other experiments \cite{clark1978,drapier1998,acharya2020}}
+	\caption{The measured $\expval{P_T^2}$ from SeaQuest for $p+p\to J/\psi$ compared with other experiments \cite{clark1978,drapier1998,acharya2020}}
 	\label{fig:pt_s}
 \end{figure}
 
@@ -434,7 +426,7 @@ shown in \cref{fig:pd/pp_csr}. The difference between the Drell-Yan and the char
 cross section ratios clearly reflect the different underlying mechanisms in
 these two processes.
 \begin{figure}
-	\missingfigure{$pd/pp$ cross section ratio vs $x_F$, compared with DY}
+	\includegraphics[width=\linewidth]{crossSections/xF/pdpp_CSR_5-6.pdf}
 	\caption{The $p+d/p+p$ per nucleon cross section ratios for $J/\Psi$ and
 		$\Psi^\prime$ versus $x_F$. Both the result from the SeaQuest at 120 GeV proton
 		beam energy and that from the NA51 measurement~\cite{abreu1998} with 450
