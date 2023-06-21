@@ -8,7 +8,7 @@
 \usepackage{subcaption}
 \usepackage[separate-uncertainty=true]{siunitx}
 \usepackage{physics}
-\usepackage[]{hyperref}
+\usepackage{hyperref}
 \usepackage{cleveref}
 \usepackage[obeyFinal]{todonotes}
 \setuptodonotes{inline}
@@ -16,435 +16,524 @@
 \graphicspath{{figures/}}
 \DeclareSIUnit\barn{b}
 
+\captionsetup{justification=raggedright,singlelinecheck=false}
 \begin{document}
-\title{Measurement of $(p+d)$ and $(p+p)$ cross section for
-	$J/\Psi$ and $\Psi^\prime$ production at \SI{120}{\GeV}}
+
+\title{Measurement of $J/\psi$ and $\psi^\prime$ production in $p+p$ and
+$p+d$ interactions at \SI{120}{\GeV}}
 \input{author}
-
 \date{\today}
-\begin{abstract}
-	High-mass dimuon production in $p+p$ and $p+d$ interaction has been measured
-	in the SeaQuest experiment with \SI{120}{\GeV} proton beam at Fermilab.
-	We report the $(p+d) / (p+p)$ cross section
-	ratios for $J/\Psi$ and $\psi^\prime$ production covering the forward
-	rapidity region of $0.3 < x_F <0.8$. Unlike the recently reported
-	$(p+d) / (p+p)$ Drell-Yan cross section ratios from SeaQuest, which are
-	sensitive to the
-	$\bar{d} / \bar{u}$ antiquark distributions in the proton, the corresponding
-	cross section ratios for charmonium production are primarily
-	sensitive to the gluon
-	distributions in the proton and neutron. We compare the measured
-	charmonium production cross section ratios with that of the
-	Drell-Yan process. We also compare the measured cross section ratios with
-	theoretical calculations.
 
-	\todo[inlinewidth=12cm]{Should the focus be on the cross section or the ratio?}
+\begin{abstract}
+High-mass dimuon production in $p+p$ and $p+d$ interactions has been measured
+in the Fermilab SeaQuest experiment with \SI{120}{\GeV} proton beam. 
+We report the $(p+d) / (p+p)$ cross section
+ratios for $J/\psi$ and $\psi^\prime$ production covering the forward
+rapidity region of $0.3 < x_F <0.8$. Unlike the  
+$(p+d) / (p+p)$ Drell-Yan cross section ratios which are 
+sensitive to the sea-quark flavor in the proton, the corresponding
+ratios for charmonium production are primarily 
+sensitive to the gluon contents in the proton relative to that in the
+neutron. The measured charmonium cross section ratios are consistent with 
+unity, in notable contrast to that of the Drell-Yan process. 
+The absolute $J/\psi$ and
+$\psi^\prime$ cross sections versus $x_F$ 
+are also obtained and compared with NRQCD calculations. The $x_F$ dependence
+of the $\psi^\prime / (J/\psi)$ cross section ratios suggests the increasing
+importance of quark-antiquark annihilation process for $\psi^\prime$ 
+production. 
 \end{abstract}
 
 \pacs{14.20.Dh,14.65.Bt,13.60.Hb}
 
 \maketitle
+
 \section{Introduction}
+
 The SeaQuest experiment at Fermilab was designed to measure high-mass dimuons
 produced in the interaction of \SI{120}{\GeV} proton beam with various targets
-including liquid hydrogen and deuterium and solid nuclear targets. Dimuons
-originating from the Drell-Yan process~\cite{drell1970} as well as from the decay of quarkonium
-states ($J/\Psi$ and $\Psi^\prime$) have been collected simultaneously.
-Results of the $(p+d) / (p+p)$ Drell-Yan cross section ratios, which are sensitive
-to the flavor asymmetry of $\bar{d}/ \bar{u}$ in the proton, have been reported
-recently~\cite{dove2021,dove2023}. In this paper, we report the
-$p+p$ and $p+d$ cross section for the $J/\Psi$ and $\Psi^\prime$ charmonium production.
+including liquid hydrogen, liquid deuterium, and solid nuclear 
+targets~\cite{aidala2019}. Dimuons
+originating from the Drell-Yan process~\cite{drell1970} as well as from the 
+decay of charmonium 
+states ($J/\psi$ and $\psi^\prime$) were collected simultaneously. 
+Results from SeaQuest on the $(p+d) / (p+p)$ Drell-Yan cross section ratio, 
+which is sensitive
+to the $\bar d / \bar u$ flavor asymmetry in the proton, were reported
+recently~\cite{dove2021,dove2023}. In this paper, we present results from
+SeaQuest on the $J/\psi$ and $\psi^\prime$ charmonium production in $p+p$
+and $p+d$ interactions with \SI{120}{\GeV} proton beam.
 
-\todo{explain the interest of studying the charmomnium}
-Unlike the Drell-Yan process which primarily involves the annihilation
-of quark and antiquark pair via electromagnetic interaction, charmonium
+Unlike the Drell-Yan process which primarily involves the  
+quark - antiquark annihilation via electromagnetic interaction, charmonium
 production proceeds via strong interaction containing contributions from
 both the quark-antiquark annihilation and the gluon-gluon
 fusion processes. The simultaneous measurement of these two very different
-processes, Drell-Yan and charmonium production, provides complimentary
-information on the partonic structures of the nucleon.
+processes provides complimentary
+information on the partonic structures of the nucleon. In particular,
+the $(p+d) / (p+p)$ cross section ratio for charmonium production is expected
+to be sensitive to the ratio of the gluon distributions in the proton 
+and deuteron.
 
-From the consideration of charge symmetry (CS), which corresponds to an
-invariance under a rotation of $180^\circ$ along the second axis of the
-isospin space, the gluon distribution in the proton should be identical
-to that of the neutron. This reflects the iso-scalar nature of the gluon.
-Evidence for a small violation of charge symmetry has been
-reported in some interactions
-involving hadrons, such as the $d d \to {\pi^0}~^4\mbox{He}$
-reaction~\cite{stephenson2003}
-and the $n p \to \pi^0 d$ reaction~\cite{opper2003}.
-Charge symmetry is also predicted to be violated at the
+Charge symmetry (CS) operation corresponds to  
+a rotation of $180^\circ$ along the second axis of the 
+isospin space. This operation interchanges up and down quarks, as well
+as proton and neutron. 
+%Evidence for the violation of charge symmetry at the hadronic level has been
+%reported in interactions such as the $d d \to {\pi^0}~^4\mbox{He}$
+%reaction~\cite{stephenson2003}
+%and the $n p \to \pi^0 d$ reaction~\cite{opper2003}.
+Violation of charge symmetry is predicted at the
 partonic level, although there exists no experimental evidence
-so far for such violations~\cite{londergan2010}. A sensitive measurement of the
-gluon contents in proton and deuteron could provide a test of CS at
-the partonic level~\cite{piller1996,zhu2008}.
+so far~\cite{londergan2010}. Since gluon is an iso-scalar particle, charge symmetry
+requires that the gluon distributions in the proton and neutron
+should be identical. A sensitive measurement of the
+gluon contents in proton and neutron could provide a test of CS at
+the partonic level~\cite{piller1996,zhu2008,lansberg2012}.
+ 
+While proton-induced charmonium production is generally dominated
+by the gluon-gluon fusion process~\cite{vogt1999}, the
+quark-antiquark annihilation process can also contribute. 
+The quark-antiquark annihilation is sensitive to the
+$\bar{d} / \bar{u}$ flavor asymmetry in the proton, while the
+gluon-gluon fusion is sensitive to the gluon contents in proton and
+neutron. The relative importance of these two
+processes depends on the beam energy as well as on the 
+Feynman-$x$ ($x_F$) of the charmonium~\cite{peng1995}. Therefore, the 
+beam-energy and the $x_F$ dependencies
+of the $(p+d) / (p+p)$ cross section ratio for $J/\psi$ production 
+could reveal the relative importance of these two processes.
 
-While proton-induced charmonium production is expected to be dominated
-by the gluon-gluon fusion process~\cite{vogt1999}, some contributions from the
-quark-antiquark annihilation process is also anticipated. The relative
-importance of these two
-processes is expected to depend on the total energy of the colliding hadrons
-as well as the Feynman-$x$ ($x_F$) of the
-charmonium~\cite{peng1995}. The quark-antiquark annihilation is sensitive to the
-$\bar d / \bar u$ flavor asymmetry in the proton, while the
-gluon-gluon fusion is expected to be similar for the reaction
-on hydrogen and deuterium targets. Therefore, the $x_F$ dependence
-of the $(p+d) / (p+p)$ cross section ratio for $J/\Psi$ production could reveal
-the relative importance of these two processes.
+The NA51 Collaboration reported a measurement of the $(p+d) / (p+p)$ cross 
+section ratios for charmonium production at \SI{450}{\GeV} at a single value of
+rapidity ($x_F \sim 0.$)~\cite{abreu1998}. The present measurement covers the 
+kinematic range of $0.3 < x_F < 0.8$. The lower beam energy of \SI{120}{\GeV}
+for the SeaQuest experiment is also expected to probe
+the parton distributions at larger values of $x$, the fractional momentum
+carried by the partons, than accessed by the NA51 experiment at \SI{450}{\GeV}.
 
-The NA51 Collaboration reported a measurement of the $(p+d)$ and $ (p+p)$ cross
-section for charmonium production at 450 GeV at a single value of
-rapidity~\cite{abreu1998}. The present measurement covers the kinematic range
-of $0.3 < x_F < 0.8$. The 120 GeV beam energy
-in the SeaQuest experiment is expected to probe
-the parton distribution at larger values of $x$, the fractional momentum
-carried by the partons, than probed by the NA51 experiment at 450 GeV.
-
-\todo{explain the scope of the paper}
-The organization of this paper is as follows. Following this introduction, the
-SeaQuest experiments will be described in \cref{sec:SeaQuest}. \Cref{sec:analysis}
-will present the procedure for data analysis and Monte-Carlo simulation. Results
-of the $x_F$ and $P_T$ dependencies of the $p+p$ and $p+d$ cross sections will
-be presented in \cref{sec:cross_section}. The $(p+d)/(p+p)$ charmonium cross section
-ratios will be compared with the Drell-Yan ratios in \cref{sec:CSR}, followed by a
-conclusion.
-
+%The organization of this paper is as follows. Following this introduction,
+%the SeaQuest experiment will be described in Section II.
+%Section III will present the procedure for data analysis and Monte-Carlo
+%simulation. Results of the $x_F$ dependencies of the $p+d$ and $p+p$
+%cross sections will be presented in Section IV. 
+%will be presented in Section IV. The $(p+d)/(p+p)$ $J/\Psi$ cross section
+%ratios will be compared with the Drell-Yan ratios, followed by Conclusions.
+ 
 \section{The SeaQuest Experiment}
-\label{sec:SeaQuest}
-\todo{brief discussion of the spectrometer}
-The SeaQuest experiment was performed using a \SI{120}{\GeV} proton beam from the
+
+The SeaQuest experiment was performed using a \SI{120}{\GeV} proton beam from the 
 Fermilab Main Injector. The SeaQuest dimuon spectrometer was designed for
 detecting high-mass dimuon pairs produced in the interaction of proton
 with various targets. Details of the SeaQuest spectrometer can be found
-elsewhere~\cite{aidala2019}. A primary proton beam with up to $6 \times 10^{12}$
-protons in a 4-second long spill every minute was incident upon one
-of three identical 50.8-cm long cylindrical stainless steel
-target flasks containing either liquid hydrogen, liquid deuterium,
-or vacuum. The targets alternated between liquid hydrogen, liquid deuterium,
-and the empty flask targets. A Beam Intensity Monitor (BIM) Cherenkov counter
-was placed in the beam to record the instantaneous proton intensity for
-each 1-ns long RF bucket at \SI{53}{\MHz} repetition rate. The BIM is essential
-for measuring the integrated beam luminosity, and to inhibit triggers
-occurring within RF buckets containing large number of protons
-exceeding a preset threshold. This significantly reduces the data-acquisition
-deadtime by rejecting at the trigger level those events which are potentially
-too noisy to be reliably reconstructed.
+elsewhere~\cite{aidala2019,dove2021,dove2023}. A primary proton beam containing 
+up to $6 \times 10^{12}$ protons in a 4-second long beam spill every minute 
+was incident upon one of three identical \SI{50.8}{\cm} long cylindrical 
+stainless steel
+target flasks. The targets alternated between liquid hydrogen, liquid deuterium,
+and the empty flask targets. A Beam Intensity Monitor (BIM) Cherenkov counter 
+was placed in the beam to record the instantaneous proton intensity for 
+each \SI{1}{\ns} long RF bucket at \SI{53}{\MHz} repetition rate. 
+%The BIM is essential
+%for measuring the integrated beam luminosity, and to inhibit triggers
+%occuring within RF buckets containing large number of protons 
+%exceeding a preset threshold. 
+%This significantly reduces the data-acquisition
+%deadtime by not triggering on events which are too noisy to be 
+%reliably reconstructed.  
 
-The spectrometer consists of four detector stations containing
-hodoscopes and tracking chambers.
-Central to the spectrometer are two large dipole magnets.
-The first magnet (FMag) downstream of the target is a solid iron 10
-T-m focusing magnet which
+\begin{figure}[tb]
+\includegraphics*[width=\linewidth]{massFit/LD2_massfit}
+\caption{Dimuon mass distribution for events collected 
+on liquid deuterium target for the second data set.
+The data points (solid circles) are
+compared with a fit consisting of various components. The dashed curves are
+for the $J/\psi$ and $\psi^\prime$ resonances, and the dotted curve is from the
+empty target flask. The accidental background is represented as the
+dot-dashed curve, and the Drell-Yan dimuons are displayed as the solid curve.}
+\label{Fig:LD2_Mass}
+\end{figure}
+
+%\begin{figure}[tb]
+%\includegraphics*[width=\linewidth]{LD2_massfit.eps}
+%\caption{Same as Fig.~\ref{Fig:LH2_Mass}, but for data collected on 
+%the liquid hydrogen target.}
+%\label{Fig:LD2_Mass}
+%\end{figure}
+
+The SeaQuest spectrometer consists of two dipole magnets and 
+four detector stations equipped with hodoscopes and tracking chambers.
+Central to the spectrometer are two large dipole magnets. 
+The first magnet downstream of the target is a solid iron magnet which
 also serves as a beam-dump and a hadron absorber. The second
-magnet (KMag) placed between the first and second detector stations
-provided a \SI{0.41}{\GeV/c} transverse momentum kick
-for measuring the charge and momentum of the muons. Dimuon events
+magnet serves as a momentum analyzing magnet. Dimuon events
 were triggered based on the requirement of a triple hodoscope
 coincidence with a pattern consistent with a muon pair originating
-from the target. Various diagnostic triggers were also implemented
-for studying the spectrometer performance.
+from the target. Various diagnostic triggers were also implemented.
+In particular, the ``single-muon" trigger was used to evaluate the 
+accidental dimuon
+background. The ``random" trigger sampled the
+detector response during the data-taking.
+% and provided input to the
+%Monte-Carlo simulation of the experiment.
+
+%\begin{table}[tbp]
+
+%\caption{Yields and average values of kinematic variables
+%for $J/\psi$ and $\psi^\prime$ events measured in $p+p$ and $p+d$ collisions in SeaQuest.}
+%  \label{tab:tabyield}
+%  \begin{tabular}{cccc}
+%hline
+%\hline
+%Reaction & Yield & $\langle x_F \rangle$ 
+%& $\langle p_T \rangle$ \\ \hline
+%$p+p \to J/\psi$ & xx & xx & xx\\
+%$p+p \to \psi^\prime$ & xx & xx & xx\\
+%$p+d \to J/\psi$ & xx & xx & xx\\
+%$p+d \to \psi^\prime$ & xx & xx & xx\\
+%\hline
+%\hline
+%\end{tabular}
+%\end{table}
 
 \section{Data Analysis}
-\label{sec:analysis}
+
+\begin{figure}[tb]
+\includegraphics*[width=\linewidth]{crossSections/xF/cs_xF_full}
+\caption{The differential cross
+section per nucleon $d\sigma / d x_F$ for $J/\psi$ and $\psi^\prime$
+production in $p+p$ and $p+d$ interaction at \SI{120}{\GeV}.
+The curves correspond to NRQCD calculation using the LDMEs obtained
+in \cite{chang2023} and the nucleon PDFs from \cite{hou2021}.}
+\label{fig:cs_xF}
+\end{figure}
+
+The SeaQuest data sets are separated into two parts, each containing 
+roughly half of the total collected data. The first part includes data 
+taken between June 2014 and July 2015, and the second part covered the 
+remaining period up to July 2017.
+Results on the analysis of the Drell-Yan events from the first data set 
+have already been reported~\cite{dove2021,dove2023}. For the charmonium data 
+reported in this paper, we have analyzed the full SeaQuest data sets. 
+Since the trigger conditions and the detector configuration for the two 
+data sets are not identical, the analysis was performed
+separately for each data set. Results obtained from the two data sets 
+are first compared to check their consistency, and then combined for 
+the final results.    
+
+\begin{figure}[tb]
+\includegraphics*[width=\linewidth]{crossSections/pT/cs_pT_full}
+\caption{The differential cross
+$d\sigma / d p^2_T$ per nucleon for $J/\psi$ and $\psi^\prime$
+production in $p+p$ and $p+d$ interaction at \SI{120}{\GeV}.
+The curves correspond to fits using the Kaplan form described in the
+text.}
+\label{fig:cs_pT}
+\end{figure}
+
 Tracks reconstructed in the drift chambers were extrapolated
-to the target region using the momentum determined by
-the KMag analyzing magnet. Only dimuon events consistent with originating
-from the target, rather than from the beam dump, were selected with various
-analysis cuts. For events surviving these analysis cuts, the target
+to the target region. Only dimuon events consistent with originating
+from the target were selected. The target
 position was then used to
 refine the parameters of each muon pair. The resulting
-RMS mass resolution for $J/\Psi$ is $\sim\SI{200}{\MeV}$.
+RMS mass resolution for $J/\psi$ is $\sim$\SI{200}{\MeV}.
 This resolution is dominated by the finite target length and the
 multiple scattering of muons in the iron magnet.
 
-\todo{explain mass fit, refer to long paper}
-\begin{figure}
-	\includegraphics[width=\linewidth]{massFit/LH2_massfit}
-	\todo{revisit style of massfit, might use figure in long paper}
-	\caption{Dimuon mass distribution for data collected on liquid hydrogen target
-		after all analysis cuts.}
-	\label{fig:massfit_LH2}
-\end{figure}
-\Cref{fig:massfit_LH2} shows the dimuon mass spectrum for the data collected with the
-liquid hydrogen target. In order to extract the yields of $J/\Psi$ and
-$\Psi^\prime$, we performed a fit to the dimuon mass distribution taking
-into account several contributions. First, the mass spectrum from the
-data collected with empty target flask, properly normalized by the
-integrated beam intensity, is shown as the dotted curve. Second, the
-dimuon mass distributions for $J/\Psi$ and $\Psi^\prime$ are shown as
-the solid curves. A detailed Monte-Carlo (M-C) simulation based on Geant was
-performed to obtain the expected line shapes of the $J/\Psi$ and $\Psi^\prime$
-resonances. The M-C simulation first generated the ``clean" dimuon events,
-which were then embedded by the additional hits in the detectors according to
-the data collected with the ``random" trigger. These embedded
-so-called ``messy" M-C events were then analyzed by applying reconstruction
-and target selection cuts identical to those applied to the real data. This
-procedure ensures that the spectrometer responses to the background hits,
-reflected in the "random" trigger data, are properly taken into account.
-Third, the dimuons orginating from the Drell-Yan process are simulated
-by the M-C, as shown in the dashed curve in \cref{fig:massfit_LH2}. These M-C
-Drell-Yan events were generated using next-to-leading order
-calculations and the CT14 parton distributions,
-which reproduce the $\bar{d}/ \bar{u}$ asymmetry in the $x < 0.3$ region.
-The same embedding procedure was also applied to the Drell-Yan M-C data.
+\Cref{Fig:LD2_Mass} shows the dimuon mass spectrum for the data 
+collected with the
+liquid deuterium target for the second data set. A comparison with the 
+dimuon mass spectrum obtained for the first data set, 
+reported in~\cite{dove2023}, shows
+a small but noticeable difference attributed to the different 
+trigger conditions. 
 
-\begin{figure}
-	\includegraphics[width=\linewidth]{massFit/LD2_massfit}
-	\todo{revisit style of massfit, might use figure in long paper}
-	\caption{Same as \cref{fig:massfit_LH2}, but for data collected on the liquid
-		deuterium target.}
-	\label{fig:massfit_LD2}
-\end{figure}
+To extract the yields of $J/\psi$ and
+$\psi^\prime$, the dimuon mass spectrum was fitted by 
+including several components. First, the
+data collected with empty target flask
+are used to determine the background originating from sources other than the
+liquid target. Second, a Monte-Carlo (M-C) based on 
+GEANT4 was performed to obtain the expected line shapes of the $J/\psi$ 
+and $\psi^\prime$ resonances. It first generated the ``clean" 
+dimuon events, which were then embedded by the additional hits in the detectors 
+according to the data collected with the ``random" trigger. This
+procedure ensures that the spectrometer responses to the background hits
+are properly taken into account.
+Third, dimuons from the Drell-Yan process are simulated using 
+next-to-leading order
+calculation with the CTEQ14 parton distributions.
+%These M-C
+%Drell-Yan events were generated using next-to-leading order
+%calculations and the CTEQ14 parton distributions.
+The embedding procedure was also applied to the Drell-Yan M-C data.
+Finally, the accidental background, caused by two independent 
+interactions within the same RF bucket, is simulated
+by forming a random combination of data collected with the 
+``single-muon" trigger, as discussed in detail in Ref.~\cite{dove2023}.
+These embedded M-C events were then analyzed by applying cuts identical 
+to those for the real data.
 
-In addition to the above contributions to the dimuon events, an important
-contribution is the accidental dimuon background caused by two charged
-muons generated in two independent interactions from protons in the same
-RF bucket with the target or other material. An extensive
-study has been performed to determine the mass distribution of this background,
-and we found that this background could be simulated by using
-the data collected with the special ``single-muon" trigger. An analysis
-of data formed by a random
-comination of these single-muon tracks, weighted by the proper beam intensity
-profile consistent with that for the dimuon events, is shown as the dot-dashed
-curve in \cref{fig:massfit_LH2}. A fit to the dimuon data, allowing the normalizations of
-the various components except the empty flask data to vary, is shown in \cref{fig:massfit_LH2}
-as the solid curve. The data are well described by the combination of various
+A fit to the $p+d$ dimuon data, 
+allowing the normalizations of
+the various components except the empty flask data to vary, is 
+shown in \cref{Fig:LD2_Mass}. 
+The data are well described by the combination of various
 components. The adequacy of this approach is further supported by the excellent
-agreement for the extracted Drell-Yan $(p+d) / (p+p)$ cross section ratio
+agreement for the extracted Drell-Yan $(p+d) / (p+p)$ cross section ratio 
 between this method~\cite{dove2023} and an independent intensity-extrapolation
 method adopted in Ref.~\cite{dove2021}.
 
-\Cref{fig:massfit_LD2} shows the dimuon mass distribution for events passing all analysis
-cuts for the data collected on the liquid deuterium target. The various curves
-in \cref{fig:massfit_LD2} correspond to the different components analogous to those in \cref{fig:massfit_LH2}.
-The good agreement between the data and the fit indicates the suitability of
-this approach to extract the $J/\Psi$ and the $\Psi^\prime$ yields.
+%Figure~\ref{Fig:LH2_Mass} shows the dimuon mass distribution for 
+%events passing all analysis
+%cuts for the data collected on the liquid hydrogen target. The various curves
+%in Fig.~\ref{Fig:LH2_Mass} correspond to the different components 
+%analogous to those in Fig.~\ref{Fig:LD2_Mass}.
+%The good agreement between the data and the fit indicates the suitability of
+%this approach to extract the $J/\psi$ yield. Good agreement between the first
+%data set and the fit was also obtained for the first data set, as shown in
+%Ref.~\cite{Dove22}. 
+%Table~\ref{tab:tabyield} 
+%shows the numbers of $J/\psi$ and $\psi^\prime$ events for $p+p$ and $p+d$
+%extracted from the analysis of both data sets. The mean values of the 
+%$x_F$ and $p_T$ kinematic variables 
+%are also listed in Table~\ref{tab:tabyield}. We recall
+%the following definitions of the $J/\psi$ kinematic variable:
+%\begin{equation}
+%x_F = \frac{P_L}{P_{max}} = \frac{2P_L}{\sqrt s (1-M^2/s)},
+%\label{eq:eq1}
+%\end{equation}
+%where $P_L$ is the longitudinal momentum of $J/\psi$ and $P_{max}$
+%is the maximum momentum for $J/\psi$ in the hadron-hadron center-of-mass
+%frame. $M$ and $\sqrt s$ are the $J/\psi$ mass and the hadron-hadron total
+%energy, respectively. From the $J/\psi$ four momentum $Q$, the variables
+%$x_1$ and $x_2$ are obtained:
+%\begin{equation}
+%x_1 = \frac{P_2 \cdot Q}{P_1 \cdot P}~~~ \mbox{and}~~~ 
+%x_2 = \frac{P_1 \cdot Q}{P_2 \cdot P},
+%\label{eq:eq2}
+%\end{equation}
+%where $P_1$ and $P_2$ are the four momenta of the projectile and target hadron,
+%respectively, and $P$ is the sum of $P_1$ and $P_2$.
 
-We recall the following definitions of the kinematic variable:
+To obtain the charmonium differential cross sections,
+the data were split into bins of $x_F$ and $p_T$ and each dimuon mass 
+spectrum was fitted with the procedure described earlier 
+to extract the $J/\psi$ and $\psi^\prime$ yield.
+We recall the following definitions of $x_F$:
 \begin{equation}
-	x_F = \frac{P_L}{P_{max}}=\frac{2P_L}{\sqrt{s}\left(1-M^2/s\right)},
+x_F = \frac{2P_L}{\sqrt s (1-M^2/s)},
+\label{eq:eq1}
 \end{equation}
-where $P_L$ is the longitudinal momentum of the $J/\psi$ and $P_{max}$ is
-the maximum momentum for the $J/\psi$ in the hadron-hadron center-of-mass
-frame. $M$ and $\sqrt{s}$ are the $J/\psi$ mass and the hadron-hadron total energy,
-respectively. From the $J/\psi$ four momentum $Q$, the variable $x_1$ and $x_2$
-are obtained:
+where $P_L$ is the longitudinal momentum of the charmonium.
+$M$ and $\sqrt s$ are the $J/\psi$ mass and the hadron-hadron total
+energy, respectively.   
+The charmonium production cross section is obtained as follows
 \begin{equation}
-	x_1=\frac{P_2\cdot Q}{P_2 \cdot \left(P_1 + P_2\right)} \textrm{ and } x_2=\frac{P_1\cdot Q}{P_1 \cdot \left(P_1 + P_2\right)}
-\end{equation}
-where $P_1$ and $P_2$ are the four momenta of the projectile and target hadron,
-respectively.
+d\sigma = \frac{Y}{Acc \cdot Eff \cdot Lum}, 
+\label{eq:eq2}
+\end{equation}    
+where $Y$ is the number of $J/\psi$ or $\psi^\prime$ events
+for each $x_F$ or $p_T$ bin, $Acc$ the spectrometer acceptance, 
+$Eff$ the efficiency for  analysis cuts, and $Lum$ the effective 
+luminosity including the data-acquisition deadtime. 
 
-\section{\texorpdfstring{$J/\psi$}{J/psi} and \texorpdfstring{$\psi'$}{psi'} Cross Section}
-\label{sec:cross_section}
-\todo{describe the cross section calculation}
-In order to obtain the $J/\Psi$ and $\psi'$ $d\sigma/dx_F$ differential cross sections,
-the data were split into five bins of $x_F$ and the dimuon mass distributions
-were fitted for each $x_F$ bin to extract the $J/\Psi$ and $\psi'$ yield.
-The quarkonium production cross section is obtained from the yields ($Y$) as follows
-\begin{equation}
-	d\sigma = \frac{Y}{Acc \cdot Eff \cdot Lum},
-	\label{eq:eq2}
-\end{equation}
-where $Acc$ is the spectrometer acceptance, $Eff$ the efficiency for
-analysis cuts, and $Lum$ the effective luminosity including the
-data-acquisition deadtime.
-\todo{describe the extracted cross section and how it compared with predictions}
-\begin{figure*}[h]
-	\begin{subfigure}{0.45\linewidth}
-		\includegraphics[width=\linewidth]{figures/crossSections/xF/combine_xF_LH2_5-6_5770_psip}
-	\end{subfigure}
-	\begin{subfigure}{0.45\linewidth}
-		\includegraphics[width=\linewidth]{figures/crossSections/xF/combine_xF_LD2_5-6_5770_psip}
-	\end{subfigure}
-	\caption{The measured $d\sigma /d x_F$ for $J/\psi$ and $\psi'$. The curves correspond to NRQCD
-		calculations using the LDMEs obtained from Ref.~\cite{hsieh2021} and the CT14 PDF.}
-	\label{fig:xF_cross_sections}
-\end{figure*}
+The values of $d\sigma/ d x_F$ per target nucleon for $J/\psi$ and
+$\psi^\prime$ production in $p+p$ and $p+d$ collisions are shown in 
+\cref{fig:cs_xF} and listed
+in \cref{tab:xfcros}. The $d\sigma/ d x_F$ differential cross sections are
+obtained by using a $p_T$ distribution in the acceptance calculation
+which best fits the data. The systematic uncertainties
+include an overall normalization
+uncertainty, common to both the $p+p$ and $p+d$ cross sections.
+Other systematic errors are from the uncertainty of the fitting 
+of the mass distributions and the detector efficiencies.
+\todo{Add the discussion on the NRQCD calculations and the comparison
+with the data. Also mention the broader xF distribution for 
+$\psi^\prime$ versus $J/\psi$.}
 
-\todo{Need detail of the NRQCD calculation.}
-To compare the measured cross section for charmonium
-production with theoretical expectation, we have preform calculation
-using the Next-to-Leading order (NLO) non-relativistic QCD (NRQCD)
-framework \cite{bodwin1995}. In this framework, the differential cross section
-for a charmonium state $H$ ($H=J/\psi, \psi'$) is given by
-\begin{widetext}
-	\begin{equation}
-		\begin{split}
-			\frac{d\sigma^H}{dx_F} &=\sum_{i,j = q,\bar{q},G}\int^1_0 dx_1 dx_2 \delta(x_F-x_1+x_2)\\
-			&\cross f_{i/A}\left(x_1,\mu_F\right)f_{j/B}\left(x_2,\mu_F\right)\hat{\sigma}\left[ij\to H\right]\left(x_1P_A,x_2P_B,\mu_F,\mu_R , m_c\right),
-		\end{split}
-	\end{equation}
-	\begin{equation}
-		\hat{\sigma}\left[ij\to H\right]= \sum_n C^{ij}_{c\bar{c}\left[n\right]}\left(x_1P_A,x_2P_B,\mu_F,\mu_R , m_c\right)\expval{O^H_n \left[^{2S+1}L_J\right]},
-	\end{equation}
-\end{widetext}
-where $i$ and $j$ label the type of interacting partons (gluons, quarks and antiquarks)
-and the $c\bar{c}$ pair produced in detonated by it color ($n$), spin ($S$),
-orbital angular momentum ($L$) and total angular momentum ($J$).
-The production of the $c\bar{c}$ pair ($C^{ij}_{c\bar{c}\left[n\right]}$) proceeds
-through a short-distance partonic interaction, calculated using perturbative QCD.
-The probability of hadronization of a $c\bar{c}$ pair into some charmonium bound
-state depends on its spin, color and angular momentum.
-Being of a non-perturbative nature, the hadronization is described by the associated
-long-distance matrix elements (LDMEs) ($\expval{O^H_n \left[^{2S+1}L_J\right]}$).
-The LDMEs are mainly determined by a fit to data and assumed to be universal, independent of beam or target hadrons and the energy scale. The LDMEs used in the calculation are taken from Ref.~\cite{hsieh2021}.
-
-The magnitude and the shape of the extracted $J/\psi$ cross sections,
-shown in \cref{fig:xF_cross_sections}, are in good agreement with the NRQCD calculation.
-However, the extracted $\psi'$ cross section is considerably wider than the expectation.
-It is possible the LDMEs used in for the $\psi'$ cross section calculation is not fully optimized.
-This new result on the $\psi'$ cross section can be used in further constrain the LDMEs.
-
-\begin{table*}[ht]
-	\caption{The differential cross section for $p+p$ to $J/\psi$ and $\psi'$  as well as the ratio of
-		for each $x_F$ bin. The first uncertainty  statistical, the second systematic. }
-	\label{tab:pp_cs_xF}
-	\input{table/xF_full_LH2.tex}
+\begin{table*}
+  \caption{The differential cross sections per nucleon, $d\sigma/dx_F$
+(in \unit{\nano\barn}),
+for $J/\psi$ and $\psi^\prime$ production in $p+p$ and $p+d$
+collisions at 120 GeV for different $x_F$ bins.
+The statistical and the systematic uncertainties are also shown.}
+	\begin{center}
+	  \label{tab:xfcros}
+  \input{table/xF_full_combined.tex}
+  \end{center}
 \end{table*}
 
-\begin{table*}[ht]
-	\caption{The differential cross section for $p+d$ to $J/\psi$ and $\psi'$  as well as the ratio of
-		$\sigma_{\psi'}/\sigma_{J\psi}$ for each $x_F$ bin. The first uncertainty  statistical, the second systematic. }
-	\todo{verify final result, only run 5-6 data is shown right now.}
-	\label{tab:pd_cs_xF}
-	\begin{tabular}{c|ccccc}
-		\hline
-		$x_F$ range & $\expval{x_F}_{J/\psi}$ & $\left.d\sigma/dx_F\right|_{J/\psi}$ & $\expval{x_F}_{\psi'}$ & $\left.d\sigma/dx_F\right|_{\psi'}$ & $\sigma_{\psi'}/\sigma_{J\psi}$ \\ \hline
-		$0.40-0.60$ & 0.527                   & $9.184\pm0.378\pm0.579$              & 0.509                  & $1.9688\pm0.1446\pm0.2002$           & $0.214\pm0.018\pm0.008$         \\
-		$0.60-0.65$ & 0.624                   & $2.893\pm0.178\pm0.468$              & 0.624                  & $0.8713\pm0.1083\pm0.1862$           & $0.301\pm0.042\pm0.013$         \\
-		$0.65-0.70$ & 0.672                   & $1.834\pm0.089\pm0.171$              & 0.672                  & $0.6963\pm0.0639\pm0.0523$           & $0.380\pm0.039\pm0.006$         \\
-		$0.70-0.77$ & 0.733                   & $0.949\pm0.041\pm0.102$              & 0.733                  & $0.3520\pm0.0355\pm0.0448$           & $0.371\pm0.041\pm0.006$         \\
-		$0.77-0.95$ & 0.819                   & $0.180\pm0.008\pm0.015$              & 0.826                  & $0.0630\pm0.0114\pm0.0147$           & $0.351\pm0.065\pm0.049$         \\ \hline
-	\end{tabular}
+The $p_T$ dependencies of the $J/\psi$ and $\psi^\prime$
+cross sections are shown in \cref{fig:cs_pT} and listed in \cref{tab:ptcros} 
+for $p+p$ and $p+d$. The $d \sigma / d p_T^2$ differential
+cross sections are obtained by integrating over the $-1<x_F<1$ range
+using a parametrization which best describes the data.
+These $p_T$ distributions are fitted with
+the parametrization $d\sigma/dp_t^2 = c (1+p_t^2/p_0^2)^{-6}$\cite{kaplan1978}
+and the results of the fits are shown in \cref{fig:cs_pT}.
+
+\begin{table*}
+  \caption{The differential cross sections per nucleon, $d\sigma / dp^2_T$
+ (in \unit{\nano\barn\per\GeV\squared}),
+for charmonium production in $p+p$ and $p+d$
+collisions at 120 GeV for different $p_T$ bins. 
+The statistical and the systematic uncertainties are also shown.}
+  \label{tab:ptcros}
+  \begin{center}
+\input{table/pT_full_combined.tex}
+  \end{center}
 \end{table*}
 
-\todo{describe the $\sigma_{\psi'}/\sigma_{J/\psi}$ ratio\\
-	the $\psi'$ distribution is expected to be wider than that of $J/\psi$ as the $q\bar{q}$ is more important
-}
-\begin{figure*}[h]
-	\begin{subfigure}{0.45\linewidth}
-		\includegraphics[width=\linewidth]{figures/crossSections/xF/ratio_xF_LH2_5-6_5770}
-	\end{subfigure}
-	\begin{subfigure}{0.45\linewidth}
-		\includegraphics[width=\linewidth]{figures/crossSections/xF/ratio_xF_LD2_5-6_5770}
-	\end{subfigure}
-	\caption{The measured $\sigma_{\psi'}/\sigma_{J/\psi}$ ratio compared with NRQCD calculations}
-	\label{fig:psip_jpsi_ratio_xF}
-\end{figure*}
-\Cref{fig:psip_jpsi_ratio_xF} shows to ratio of $\sigma_{\psi'}$ to $\sigma_{J/\psi}$.
-The ratio shows a clear $x_F$ dependence, and the measured ratio increases as $x_F$ increases.
-In the NRQCD framework, the difference in the $x_F$ distributions between $J/\psi$ and $\psi'$
-is mostly originated from the relative weighting between the different production subprocess.
-This result suggests the $q\bar{q}$ annihilation being more important in the $\psi'$ production
-than the $J/\psi$.
-
-\todo{described the $P_T$ distribution and the fit, need to add a table of $\expval{P_T}$}
-\Cref{fig:pT_cross_sections} displays the differential charmonium production cross section $d\sigma/d P_T^2$
-per nucleon versus the transverse momentum. The transverse momentum distributions are fitted to the
-following function\cite{kaplan1978}
-\begin{equation}
-	f\left(P_T^2\right) \propto \frac{1}{\left(1+ P_T^2/p_1^2\right)^6},
-	\label{eq:kaplan}
-\end{equation}
-The parameter $p_1$ controls the broadness of the $P_T$ distribution. And is
-related to the average $P_T$ as follows
-\begin{equation}
-	\expval{P_T}    = \frac{35\pi p_1}{256}, \quad \mathrm{and}\quad
-	\expval{P_T^2}  = \frac{p_1^2}{4}.
-	\label{eq:pT_kaplan}
-\end{equation}
-\begin{figure*}[h]
-	\begin{subfigure}{0.45\linewidth}
-		\includegraphics[width=\linewidth]{crossSections/pT/5-6_pTsq_LH2.pdf}
-	\end{subfigure}
-	\begin{subfigure}{0.45\linewidth}
-		\includegraphics[width=\linewidth]{crossSections/pT/5-6_pTsq_LD2.pdf}
-	\end{subfigure}
-	\todo{only Run 5-6 is included here}
-	\caption{The measured $d\sigma/d P_T^2$ for $J/\psi$ and $\psi'$ for $p+p$ (left) and $p+d$ (right).}
-	\label{fig:pT_cross_sections}
-\end{figure*}
-The extracted $\expval{P_T}$ for $J/\psi$ and $\psi'$ are listed in \cref{tab:kaplan_result}.
-\begin{table*}[h!]
-	\centering
-	\caption{Extracted $\expval{P_T}$ and $\expval{P^2_T}$ for $J/\psi$ and $\psi'$ in $p+p$ and $p+d$
-		with both statistical and systematic uncertainties.	The $\expval{P_T}$ and $\expval{P^2_T}$ are evaluated
-		using \cref{eq:pT_kaplan}.}
-	\label{tab:kaplan_result}
-	\begin{tabular}{cc|c|>{\centering}m{4cm}|>{\centering}m{4cm}|m{4cm}<{\centering}}
-		\hline
-		                                               &                        & run & $p_1$                   & $\expval{P_T} (\unit{\GeV})$ & $\expval{P^2_T} (\unit{\square\GeV})$ \\ \hline
-		\multicolumn{1}{c|}{\multirow{4}{*}{$J/\psi$}} & \multirow{2}{*}{$p+p$} & 2-3 & $1.729\pm0.053\pm0.055$ & $0.743\pm0.023\pm0.024$      & $0.747\pm0.046\pm0.048$               \\ \cline{3-6}
-		\multicolumn{1}{c|}{}                          &                        & 5-6 & $1.663\pm0.042\pm0.018$ & $0.714\pm0.018\pm0.008$      & $0.692\pm0.035\pm0.015$               \\ \cline{2-6}
-		\multicolumn{1}{c|}{}                          & \multirow{2}{*}{$p+d$} & 2-3 & $1.719\pm0.055\pm0.138$ & $0.739\pm0.024\pm0.059$      & $0.739\pm0.047\pm0.119$               \\ \cline{3-6}
-		\multicolumn{1}{c|}{}                          &                        & 5-6 & $1.670\pm0.045\pm0.030$ & $0.717\pm0.019\pm0.013$      & $0.697\pm0.037\pm0.025$               \\ \hline
-		\multicolumn{1}{c|}{\multirow{4}{*}{$\psi'$}}  & \multirow{2}{*}{$p+p$} & 2-3 & $1.587\pm0.051\pm0.193$ & $0.681\pm0.022\pm0.083$      & $0.629\pm0.041\pm0.153$               \\ \cline{3-6}
-		\multicolumn{1}{c|}{}                          &                        & 5-6 & $1.675\pm0.055\pm0.074$ & $0.720\pm0.024\pm0.032$      & $0.702\pm0.046\pm0.062$               \\ \cline{2-6}
-		\multicolumn{1}{c|}{}                          & \multirow{2}{*}{$p+d$} & 2-3 & $1.593\pm0.058\pm0.205$ & $0.684\pm0.025\pm0.088$      & $0.634\pm0.046\pm0.164$               \\ \cline{3-6}
-		\multicolumn{1}{c|}{}                          &                        & 5-6 & $1.597\pm0.055\pm0.110$ & $0.686\pm0.024\pm0.047$      & $0.637\pm0.044\pm0.088$               \\ \hline
-	\end{tabular}
-\end{table*}
-
-
-\todo{The measured $\expval{P_T^2}$ vs $\sqrt{s}$ from different experiments}
-\Cref{fig:pt_s} shows the extracted $\expval{P_T^2}$ for $p+p\to J/\psi$ as a function
-of $\sqrt{s}$ from SeaQuest compared with different experiments
-\cite{badier1983,clark1978,drapier1998,acharya2020}. The $\expval{P_T^2}$ follows an
-increasing pattern versus $\sqrt{s}$ over a wide range of energies
-The data points are also fitted to the following form \cite{acharya2020}.
-\begin{equation}
-	\expval{P_T^2}=a\ln{\left( \frac{\sqrt{s}}{b} \right)},
-\end{equation}
-with $a=1.221\pm0.038$ and $b=7.59\pm0.31$, although some variation is
-expected due to the differing rapidity ranges of the measurements.
-\begin{figure}
-	\centering
-	\includegraphics[width=\linewidth]{crossSections/pT/pT_s_release}
-	\caption{The measured $\expval{P_T^2}$ from SeaQuest for $p+p\to J/\psi$ compared with other experiments \cite{clark1978,drapier1998,acharya2020}}
-	\label{fig:pt_s}
-\end{figure}
-
-\section{$(p+d)/(p+p)$ Cross Section Ratio}
-\label{sec:CSR}
-\todo{comparison with NA51}
+The $\sigma(p+d)/2\sigma(p+p)$ ratios for $J/\psi$ production are shown in 
+\cref{fig:pdpp} as a function of $x_F$.
 As a result of the identical target geometry
 of the two liquid targets and the frequent interchange between the targets,
-many of the systematic uncertainties encountered in evaluating $\sigma$
-are correlated for the hydrogen and deuterium targets. Hence, most of these
-systematic uncertainties cancel out in the ratio of $(p+d)/(p+p)$ cross
-sections.
+most of the systematic uncertainties cancel out in the 
+$(p+d)/(p+p)$ cross section ratio. The remaining uncertainties in the 
+SeaQuest $(p+d)/(p+p)$ $J/\psi$
+and $\psi^\prime$ cross section 
+ratios shown in \cref{fig:pdpp} have dominant contributions from the uncertainties
+associated with the extraction of the yields $Y$.
 
-Shown in \cref{fig:pd/pp_csr} are the $(p+d)/(p+p)$ $J/\Psi$
-and $\Psi^\prime$ cross section
-ratios measured by the NA51 Collaboration~\cite{abreu1998} with 450 GeV proton
-beam, covering a different region of $x_F$. Both the NA51 and the SeaQuest
-results show the cross section ratios for $J/\Psi$ and $\Psi^\prime$
-production are close to unity, in striking contrast to
-the corresponding ratios for the Drell-Yan process~\cite{dove2023}, also
-shown in \cref{fig:pd/pp_csr}. The difference between the Drell-Yan and the charmonium
-cross section ratios clearly reflect the different underlying mechanisms in
-these two processes.
-\begin{figure}
-	\includegraphics[width=\linewidth]{crossSections/xF/pdpp_CSR_5-6.pdf}
-	\caption{The $p+d/p+p$ per nucleon cross section ratios for $J/\Psi$ and
-		$\Psi^\prime$ versus $x_F$. Both the result from the SeaQuest at 120 GeV proton
-		beam energy and that from the NA51 measurement~\cite{abreu1998} with 450
-		GeV proton are shown.
-		For comparison, the ratios for the Drell-Yan cross sections~\cite{dove2023} are
-		also shown. The solid curve is the calculation for the $J/\Psi$ cross section
-		ratios at 120 GeV in the NLO CEM model using the CT18NLO PDFs. The dashed
-		curve represents the NLO Drell-Yan cross section ratios calculated with the
-		same PDFs~\cite{dove2023}.}
-	\label{fig:pd/pp_csr}
+Also shown in \cref{fig:pdpp} is the $(p+d)/(p+p)$ $J/\psi$
+and $\psi^\prime$ cross section
+ratios measured by the NA51 Collaboration~\cite{abreu1998} with \SI{450}{\GeV} proton 
+beam. Both the NA51 and the SeaQuest
+results show the cross section ratios for $J/\psi$
+production are closer to unity than for 
+the Drell-Yan process~\cite{dove2023}, also 
+shown in \cref{fig:pdpp}. 
+
+\begin{figure}[tb]
+\includegraphics*[width=\linewidth]{crossSections/xF/pdpp_xF}
+\caption{The $p+d/p+p$ per nucleon cross section ratios for $J/\psi$
+versus $x_F$ from SeaQuest.
+For comparison, the ratios for the Drell-Yan cross sections~\cite{dove2023} are
+also shown. The solid curve is the calculation for the $J/\psi$ cross section
+ratios at \SI{120}{\GeV} in the NRQCD model using the proton PDFs from NNPDF4.0.
+The dashed curve represents the NLO Drell-Yan cross section ratios
+calculated with the same PDFs~\cite{dove2023}.}
+\label{fig:pdpp}
 \end{figure}
 
-\section{Conclusions}
-\label{sec:Conclusions}
+\begin{figure}[tb]
+\missingfigure{Energy dependence of the per nucleon $J/\psi$ production
+cross section}
+\caption{Energy dependence of the per nucleon $J/\psi$ production
+cross section with proton beam. The solid curve corresponds to the NRQCD
+calculation, and the dashed curve is an empirical fit to the data
+as discussed in the text.}
+\label{fig5}
+\end{figure}
 
-\begin{acknowledgments}
-\end{acknowledgments}
+\begin{figure}[tb]
+\includegraphics*[width=\linewidth]{crossSections/pT/pT_s_release}
+\caption{Energy dependence of the $\langle p_T \rangle$
+for $J/\psi$ production with proton beam. The curve corresponds to
+an empirical fit to the data
+as discussed in the text.}
+\label{fig6}
+\end{figure}
 
-\nocite{*}
+
+The difference between the Drell-Yan and the charmonium
+cross section ratios clearly reflect the different underlying mechanisms in 
+these two processes. The Drell-Yan process, dominated by the
+$\bar u u$  annihilation subprocess, leads to the relation
+\begin{align}
+\sigma(p+d)_{DY}/2\sigma(p+p)_{DY} & \approx &
+\frac{1}{2} (1+ \bar u_n(x_t)/\bar u_p(x_t)) \nonumber \\
+ & = & \frac{1}{2} (1 + \bar d_p(x_t)/\bar u_p(x_t)),
+\label{eq:DY}
+\end{align}
+where $\bar q_{p,n}$ denotes the $\bar q$ distribution in the proton ($p$)
+and neutron ($n$), respectively. \Cref{eq:DY} clearly shows that the Drel-Yan
+cross section ratios are sensitive to the sea-quark flavor asymmetry 
+$\bar d(x) / \bar u(x)$. For charmonium production, the dominance of the 
+gluon-gluon fusion subprocess at this beam energy implies that
+\begin{align}
+\sigma(p+d \to J/\psi)/2\sigma(p+p \to J/\psi) \nonumber \\
+\approx \frac{1}{2} (1+ g_n(x_t)/g_p(x_t)),
+\label{eq:jpsi}
+\end{align}
+where $g_{p,n}$ refers to the gluon distribution in the proton
+and neutron, respectively. As gluon is an iso-scalar particle, one expects
+$g_p(x) = g_n(x)$ and \cref{eq:jpsi} leads to identical charmonium production cross
+section per nucleon for $p+p$ and $p+p$. This prediction of identical
+per nucleon cross section for $p+p$ and $p+d$ will be modified once the 
+contribution from $q \bar q$ annihilation is included, as discussed in the
+next Section.  
+
+%\begin{figure}[tb]
+%\includegraphics*[width=\linewidth]{jpsi_fig4.pdf}
+%\caption{Calculation for the $p+d \to J/\Psi$ differential cross
+%section $d\sigma / d x_F$ at 120 GeV in the NLO Color-Evaporation model
+%using CTEQ18NLO parton distribution functions. The dashed and dotted curve 
+%corresponds to the contribution from the $q \bar q$ annihilation and
+%the $g g$ fusion process, respectively. The arrow indicates the mean
+%$x_F$ value for the $J/\Psi$ production in SeaQuest.}
+%\label{fig4}
+%\end{figure}
+
+To compare the measured $p+d / p+p$ cross section ratios for charmonium 
+production with theoretical expectation, we have performed calculation
+using the Next-to-Leading order (NLO) Color Evaporation 
+Model (CEM)~\cite{fritzsch1977}.
+An important feature of the CEM is that it is essentially parameter-free, 
+with only a single parameter that accounts for the probability of a
+heavy quark-antiquark ($\bar Q Q$) pair to hadronize into a specific 
+quarkonium bound state. Despite its simplicity, the CEM
+gives a good description of many features of fixed-target $J/\psi$ 
+cross section data with proton and pion beams~\cite{schuler1996,chang2020}, 
+including their longitudinal momentum ($x_F$) distributions.
+
+Taking charmonium production as an example, the NLO CEM first
+produces a $\bar c c$ pair via various QCD hard processes at 
+the NLO~\cite{mangano1993}.
+For $\bar c c$ pair with an invariant mass $M_{\bar c c}$ smaller than 
+the $D \bar D$ open-charm threshold, a
+constant probability $F$, specific for each charmonium state,
+accounts for the hadronization of $\bar c c$ pair into the colorless
+charmonium state. 
+
+\todo{
+We still need to add the discussion on the results of Fig. 3 and Fig. 4
+after the new figures become available.
+}
+%\begin{figure}[tb]
+%\includegraphics*[width=\linewidth]{jpsi_fig3.pdf}
+%\caption{The $p+d/p+p$ per nucleon cross section ratios for $J/\psi$ and
+%$\psi^\prime$ versus $x_t$. Both the result from the SeaQuest at 120 GeV proton
+%beam energy and that from the NA51 measurement~\cite{NA51} with 450
+%GeV proton are shown.
+%For comparison, the ratios for the Drell-Yan cross sections~\cite{Dove} are
+%also shown. The solid curve is the calculation for the $J/\psi$ cross section
+%ratios at 120 GeV in the NLO CEM model using the CT18NLO PDFs. The dashed
+%curve represents the NLO Drell-Yan cross section ratios calculated with the
+%same PDFs~\cite{Dove}.}
+%\label{fig6}
+%\end{figure}
+\section{Conclusion}
+In summary, the simultaneous measurement of the charmonium 
+production and the Drell-Yan
+dimuons in the SeaQuest experiment allows a direct comparison between 
+the $(p+d)/(p+p)$ cross section ratios for these two distinct reactions.
+While the Drell-Yan process proceeds via electromagnetic interaction sensitive
+to the quarks and aniquarks, the charmonium production is a strong interaction
+process sensitive to the gluon contents of the colliding nucleons. These
+different characteristics between the two processes are clearly reflected
+in their different $(p+d)/(p+p)$ cross section ratios. While the ratios for
+the Drell-Yan process is significantly different from unity as a result of
+the flavor asymmetry of the light-quark sea, the charmonium production
+cross section ratios are found to be consistent with unity. This result
+is in qualitative agreement with earlier measurement at higher beam energy
+by the NA51 Collaboration, as well as the $\Upsilon$ production at 800 GeV
+by the E866 Collaboration. A combined analysis of these data is expected
+to provide a sensitive test on the assumption of identical gluon
+distributions in the proton and neutron. 
+
 \bibliography{reference}
+ 
 \end{document}
+
